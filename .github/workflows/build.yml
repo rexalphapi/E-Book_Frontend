@@ -36,4 +36,4 @@ jobs:
 
       - name: Copy files to the test website with the AWS CLI
         run: |
-          aws s3 cp ./build/* s3://rexalphapi/${github.event.repository.name}/
+          aws s3 cp ./build/* s3://rexalphapi/E-Book_Frontend/ --recursive
