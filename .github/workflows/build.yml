@@ -3,7 +3,7 @@ name: Upload E-Book Application frontend to S3
 on:
   push:
     branches:
-      - main
+      - nodir
 
 jobs:
   deploy:
