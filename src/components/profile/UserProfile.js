@@ -17,9 +17,7 @@ export default function UserProfile() {
         //fetch id from backend...
             getUserData('me' , null , null)
             .then(res => {
-                setUser(res.data.data) ; 
-                console.log(user)
-
+                setUser(res.data.data) ;     
             })
             .catch(err => {
                 console.log(`Error : unable to load user data : ${err}`)

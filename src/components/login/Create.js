@@ -193,17 +193,16 @@ export default class Create extends Component {
                     email       : this.state.email,
                     password    : this.state.password,
                 }
-                console.log(user);
+                //console.log(user);
                 axios.post(`${process.env.REACT_APP_SERVER_ADDRESS}/register/`,user , {
                     headers: {
                         "Content-Type": "application/json"
                     },
-                    
+                     withCredentials: true ,
                 })
                 .then(res => {
                     localStorage.setItem('token', res.data.token);
                     console.log(`User Profile Created Successfully! : ${res}`);
-                    window.location = '/home';
         
                 })
                 .catch(err => {
@@ -211,6 +210,7 @@ export default class Create extends Component {
                 });
         })
 
+        window.location = '/home';
 
     }
     render() {
