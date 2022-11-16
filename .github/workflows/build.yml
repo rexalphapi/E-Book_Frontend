@@ -36,5 +36,4 @@ jobs:
 
       - name: Copy files to the test website with the AWS CLI
         run: |
-          zip -r app.zip build
-          aws s3 cp app.zip s3://rexalphapi/E-Book_Frontend/
+          aws s3 cp ./build s3://rexalphapi/E-Book_Frontend/app/ --recursive
