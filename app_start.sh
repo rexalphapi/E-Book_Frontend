@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 cd /home/ec2-user/server/src
 npm start
 pm2 start npm --name "E-Book_Frontend" -- start
