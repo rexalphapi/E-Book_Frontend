@@ -39,6 +39,6 @@ jobs:
       - name: Copy files to the test website with the AWS CLI
         run: |
           cp appspec.yml ./build
-          cp -r script build
+          cp -r scripts build
           zip -r app.zip build
           aws s3 cp app.zip s3://rexalphapi/E-Book_Frontend/
