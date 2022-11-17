@@ -16,11 +16,11 @@ permissions:
 hooks:
 
   BeforeInstall:
-    - location: before_install
+    - location: scripts/before_install.sh
       timeout: 300
       runas: root
 
   ApplicationStart:
-    - location: app_start
+    - location: scripts/app_start.sh
       timeout: 300
       runas: root
