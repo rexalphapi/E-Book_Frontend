@@ -5,7 +5,7 @@ name: Upload E-Book Application frontend to S3
 on:
   push:
     branches:
-      - main
+      - m
       
 
 jobs:
@@ -38,7 +38,11 @@ jobs:
 
       - name: Copy files to the test website with the AWS CLI
         run: |
-          cp appspec.yml ./build
-          cp -r scripts build
-          zip -r app.zip build
+          mkdir package
+          cp appspec.yml ./package
+          cp -r scripts package
+          cp -r src package
+          cp -r public package
+          cp package.json ./package
+          zip -r app.zip package
           aws s3 cp app.zip s3://rexalphapi/E-Book_Frontend/
