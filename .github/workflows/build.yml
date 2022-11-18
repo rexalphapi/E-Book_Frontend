@@ -40,6 +40,7 @@ jobs:
         run: |
           mkdir package
           cp appspec.yml ./package
+          cp -r build package
           cp -r scripts package
           cp -r src package
           cp -r public package
