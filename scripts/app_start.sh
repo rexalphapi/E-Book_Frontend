@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/ec2-user/server
+cd /home/ubuntu/server
 npm start
 pm2 start npm --name "ebook-frontend" -- start
 pm2 startup
