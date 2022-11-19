@@ -41,7 +41,6 @@ jobs:
           mkdir package
           cp appspec.yml ./package
           cp -r build package
-          cp -r node_modules package
           cp -r scripts package
           cp -r src package
           cp -r public package
