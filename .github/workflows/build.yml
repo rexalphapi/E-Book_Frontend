@@ -5,7 +5,7 @@ name: Upload E-Book Application frontend to S3
 on:
   push:
     branches:
-      - main
+      - mai
       
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18
 
       - name: Install dependencies
         run: npm install --save ignore-warnings
