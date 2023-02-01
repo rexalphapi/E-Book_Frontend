@@ -138,21 +138,24 @@ export default class Navbar extends Component {
 
     render() {
             return (
-                <div>
+                <div className='navbar fixed-top p-0 ' >
                                     
-                    <nav className="navbar  navbar-light "
-                        style= {{height : '60px',backgroundColor:'#f0f8ff'}}>
-                    <Link  to ='/home'>
-                        <BookIcon size={50}  ></BookIcon>E-Book's
+                         <nav className="navbar  navbar-light w-100 h-100 mt-2"  >
+                      {/* /*  style= {{ fontSize:'1.5vw'}}>  */}
+                       
+                    <Link  to ='/home' className="navbar-brand-blue text-decoration-none h5 " >
+
+                        <BookIcon  style= {{ fontSize:'1.5vw'}} size={35}  ></BookIcon>E-Book's
                     </Link>
                     { this.state.viewType ==null ?
                     <form onSubmit ={this.onSubmitHandler}
-                    className="w-50 h-75">
-                            <div className='border border-secondary ' 
+                    className="w-50 h-70"  >
+                            <div className='border border-4  rounded-pill ' 
                                     style={{backgroundColor:'white'}}>
+                                        
                                 <select id="cars" name="cars"
-                                className='border-0'
-                                style={{outline:'none'}}
+                                className='border-0 rounded-pill  '
+                                style={{outline:'none',backgroundColor:'primary'}}
                                 onChange={this.onChangeOption}>
                                     <option >Book</option>
                                     <option >Author</option>
@@ -165,15 +168,17 @@ export default class Navbar extends Component {
                                         type="text" 
                                         placeholder="Search by book/author/category/id" 
                                         onChange ={this.onChangeSearch}
-                                        className='w-75 border-0'
+                                        className='w-50 border-0 '
                                         style={{outline:'none'}}>
                                         
                                 </input>
                                 <span type="submit" className='border-0 float-right mr-2' >
-                                        <SearchIcon size={20}
+                                        <SearchIcon class="container-xs"
                                         />
                                 </span>
                             </div>
+
+
                             </form>
                             :
                             <span></span>
@@ -182,12 +187,12 @@ export default class Navbar extends Component {
                             {/* <BiUpload size={25}></BiUpload> */}
                         {this.state.islogin ?
                                 
-                                <Dropdown>
+                                <Dropdown >
                                     <Dropdown.Toggle variant="light" id="dropdown-basic">
                                         <ProfileIcon size={35}></ProfileIcon>
                                     </Dropdown.Toggle>
 
-                                    <Dropdown.Menu>
+                                    <Dropdown.Menu >
                                         <Link to="/profile/home" className="dropdown-item">Profile</Link>
                                         <Dropdown.Item onClick={this.onClickLogout} >Logout</Dropdown.Item>
                                         <Dropdown.Item >About Us</Dropdown.Item>
@@ -195,7 +200,8 @@ export default class Navbar extends Component {
                                 </Dropdown>
                             :
                                 <div  >
-                                    <Link className="nav-link btn btn-primary text-white" 
+                                    
+                                    <Link className="nav-link text-blue h6" 
                                         to=  {{  pathname: "/login"  }}>Login
                                     </Link>
                                     

@@ -47,7 +47,7 @@ export default function BookListComponent(props) {
                 
             } 
 
-            if(viewType==='vertical')
+            if(viewType ==='vertical')
             return <BookContainer 
                                     viewType = 'Card'
                                     state = {val} 
@@ -66,7 +66,9 @@ export default function BookListComponent(props) {
 
     }
     return (
-        <div className ="mb-5 ml-4 container-fluid  p-0 ">
+        <div className ="mb-5 ml-4  container-fluid p-0 ">
+
+
             {/* <div className ="container-fluid d-flex">
                 <h5 className ="w-50 text-left ml-4">{category}</h5>
                 <h5 className ="h6 w-50 text-right mr-4"><a href = "#">View More</a></h5>
@@ -83,4 +85,3 @@ export default function BookListComponent(props) {
         </div>
     )
 }
-

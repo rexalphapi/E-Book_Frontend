@@ -1,4 +1,5 @@
 
+
 import React, {  useEffect, useState } from 'react'
 import { FaHeart as Like  } from 'react-icons/fa';
 import { FiHeart as UnLike } from 'react-icons/fi';
@@ -102,23 +103,30 @@ export default function BookContainer(props) {
 
     if(props.viewType==='Frame')
     return (
-        <div className ={`d-inline-block container text-left m-0`} style = {{width:`16%`}}>
+        <div className ={`d-inline-block container text-left m-0 col-lg-2 col-md-2 col-sm-4 col-xs-12`}>
 
             <div className = {`text-left `}>
 
+          
+                   
+   
+
                 <Link 
+
+                    
                             className ='text-dark text-decoration-none'
                             to ={{
                                     pathname : bookUrl ,
                                     state : { id : id }
                                 }}>
 
-
+                                  
+              
                     <div >
                         <img  style = {{width : '100%',height:'180px'}} 
                         src ={imgUrl}
                         alt=''></img>
-                    </div>
+                    </div> 
 
             
                 </Link>
@@ -182,11 +190,13 @@ export default function BookContainer(props) {
             </div>
             
         </div>
+
     )
+
     else
     {
         return (
-            <div className ={`d-inline-block container text-left mb-5`} style = {{width:`100%`}}>
+            <div className ={`d-inline-block container text-left mb-5 `} style = {{width:`100%`}}>
                 
 
             <div className = {`text-left d-flex`}>
@@ -271,4 +281,3 @@ export default function BookContainer(props) {
         )
     }
 }
-
